@@ -1,0 +1,175 @@
+@import "../mixin/mixin";
+@import "../variable/variable";
+
+footer{
+    background: $black;
+    .footer-main{
+        display: flex;
+        padding: 140px 0 100px;
+        flex-wrap: wrap;
+        @include x-small{
+            padding: 80px 0 50px;
+        }
+        @include small{
+            padding: 100px 0 50px;
+        }
+        .first-part{
+            width: 30%;
+            @include x-small{
+                width: 50%;
+                padding-left: 10px;
+            }
+            @include small{
+                width: 50%;
+                padding-left: 10px;
+            }
+            .image{
+                padding-bottom: 30px;
+            }
+            .info{
+                span{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #FFFFFF;
+                    padding-right: 30px;
+                    display: inline-block;
+                }
+                p{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    color: #FFFFFF;
+                    padding: 20px 0 90px;
+                }
+            }
+        }
+        .second-part{
+            padding-left: 20px;
+            width: 20%;
+            @include x-small{
+                width: 50%;
+            }
+            @include small{
+                width: 50%;
+            }
+            p{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.5;
+                color: #FFFFFF;
+            }
+            ul{
+                display: block;
+                padding-top: 30px;
+                li{
+                    padding-bottom: 15px;
+                    a{
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+        .third-part{
+            width: 20%;
+            @include x-small{
+                width: 50%;
+                padding-left: 10px;
+            }
+            @include small{
+                width: 50%;
+                padding-left: 10px;
+            }
+            p{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.5;
+                color: #FFFFFF;
+            }
+            ul{
+                display: block;
+                padding-top: 30px;
+                li{
+                    padding-bottom: 15px;
+                    a{
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #FFFFFF;
+                    }
+                }
+            }
+        }
+        .fourth-part{
+            padding-left: 40px;
+            width: 30%;
+            @include x-small{
+                width: 50%;
+            }
+            @include small{
+                width: 50%;
+            }
+            h5{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.5;
+                color: #FFFFFF;
+            }
+            p{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1.5;
+                color: #FFFFFF;
+                padding: 30px 55px 20px 0;
+            }
+            input{
+                height: 50px;
+                width: 100%;
+                margin-bottom: 40px;
+                @include x-small{
+                    width: 100%;
+                }
+            }
+            ul{
+                li{
+                    a{
+                        font-size: 26px;
+                        color: $white;
+                        padding-right: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .copy{
+        background: $theme_color;
+    .copy-main{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left{
+            p{
+                font-weight: 500;
+                font-size: 14.1939px;
+                line-height: 23px;
+                color: #FFFFFF;
+                padding: 25px 0;
+            }
+        }
+        .right{
+            ul{
+                li{
+                    a{
+                        display: flex;
+                        align-items: center;
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+}

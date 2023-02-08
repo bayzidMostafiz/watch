@@ -1,0 +1,72 @@
+@import "../variable/variable";
+
+@mixin common_btn ($bg, $color ) {
+    font-family: $inter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color;
+    padding: 18px 32px;
+    background: $bg;
+}
+@mixin common_header($align){
+    font-family: $inter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: $align;
+    color: $black;
+}
+@mixin pera ($color){
+    font-family: $inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $color;
+}
+@mixin product_name{
+    font-family: $inter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $black;
+    text-align: center;
+}
+@mixin product_price{
+    font-family: $inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $pera;
+    text-align: center;
+}
+@mixin medium {
+    @media (max-width:991.98px) {
+        @content;
+    }
+}
+@mixin x-small {
+    @media (max-width:575.98px) {
+        @content;
+    }
+}
+@mixin small {
+    @media (min-width:576px) and (max-width:767.98px){
+      @content;  
+    }
+}
+@mixin medium2 {
+    @media (min-width:768px) and (max-width:991.98px){
+      @content;  
+    }
+}
+@mixin large {
+    @media (min-width:992px) and (max-width:1199.98px){
+      @content;  
+    }
+}

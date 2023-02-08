@@ -1,0 +1,116 @@
+@import "../variable/variable";
+@import "../mixin/mixin";
+
+
+.navbar{
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    .main-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px 0;
+        @include medium{
+            padding: 30px 0;
+            position: relative;
+            flex-direction: row-reverse;
+        }
+        .logo{
+            img{
+                width: 185px;
+            }
+            @include medium{
+                margin-right: 20px;
+            }
+        }
+        .menubar{
+            display: flex;
+            gap: 100px;
+            @include medium{
+                width: 50%;
+                height: 100vh;
+                position: absolute;
+                background:$black;
+                top: 0;
+                left: 0;
+                display: flex;
+                align-items: center;
+                z-index: 99;
+                flex-direction: column;
+                transform: translateX(-100%);
+                opacity: 0;
+                visibility: hidden;
+                transition: all linear .5s;
+            }
+            ul{
+                @include medium{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding-top: 70px;
+                }
+                li{
+                    a{
+                        padding-left: 58px;
+                        font-family: $inter;
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: $white;
+                        @include medium{
+                            padding: 0;
+                            margin-top: 30px
+                        }
+                    }
+                }
+            }
+            .header-btn{
+                a{
+                   @include common_btn ($white, $theme_color);
+
+                }
+            }
+        }
+        .mobile_navbar{
+            display:none;
+            .navbar_icon[name="close_outline"]{
+                display: none;
+            }
+            @include medium{
+                display: block;
+                background: transparent;
+                margin-left: 20px;
+                font-size: 40px;
+                color: $white;
+                cursor: pointer;
+                z-index: 999;
+            }
+        }
+        
+    }
+}
+.navbar{
+    .active{
+        .menubar{
+            @include medium{
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+        }}
+        .mobile_navbar{
+            .navbar_icon[name="close_outline"]{
+                @include medium{
+                display: block;
+                }
+            }
+            // .navbar_icon[name="menu_outline"]{
+            //     display: none;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+@import"../variable/variable";
+@import "../mixin/mixin";
+
+
+#banner{
+    background: url(../images/banner-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 162px;
+    @include x-small{
+        padding-top: 60px;
+    }
+    @include small{
+        padding-top: 60px;
+    }
+    @include medium2{
+        padding-top: 90px;
+    }
+    .banner-main{
+        display: flex;
+        @include x-small{
+            flex-direction: column;
+        }
+        @include small{
+            flex-direction: column;
+        }
+        @include medium2{
+            flex-direction: column;
+        }
+        
+        .banner-info{
+            width: 50%;
+            @include x-small{
+                width: 100%;
+                padding-left: 10px;
+            }
+            @include small{
+                width: 100%;
+                padding-left: 10px;
+            }
+            @include medium2{
+                width: 100%;
+                padding-left: 10px;
+            }
+            
+            h3{
+                font-family: $inter;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: 0.9em;
+                color: $theme_color;
+                padding: 103px 0 20px;
+                
+            }
+            h1{
+                font-family: $inter;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 70px;
+                line-height: 90px;
+                color: $white;
+                @include x-small{
+                    font-size: 50px;
+                    line-height: 1.5;
+                }
+                @include small{
+                    font-size: 50px;
+                    line-height: 1.5;
+                }
+                @include medium2{
+                    font-size: 55px;
+                    line-height: 1.5;
+                }
+            }
+            p{
+                @include pera ($white);
+                padding: 20px 0 40px;
+
+            }
+            a{
+                @include common_btn($theme_color, $white)
+            }
+        }
+        .banner-image{
+            @include x-small{
+                width: 100%;
+                justify-content: center;
+            }
+            @include small{
+                width: 100%;
+                justify-content: center;
+            }
+            @include medium2{
+                width: 100%;
+                justify-content: center;
+            }
+            
+            width: 50%;
+            display: flex;
+            justify-content: right;
+            .image{
+                transform: translateY(50px);
+                z-index: 1;
+                
+                }
+            }
+        }
+    }

@@ -1,0 +1,67 @@
+@import "../variable/variable";
+@import "../mixin/mixin";
+
+#testimonial{
+    padding-top: 160px;
+    @include x-small{
+        padding-top: 60px;
+    }
+    @include small{
+        padding-top: 80px;
+    }
+    .testimonial-main{
+        .title{
+            max-width: 585px;
+            margin: 0 auto;
+            h2{
+                @include common_header(center);
+            }
+            p{
+                @include pera ($pera);
+                text-align: center;
+                padding: 20px 0 42px 0;
+            }
+        }
+    }
+    .person-info{
+        .inner-person{
+            .person{
+                text-align: center;
+                margin: 13px;
+                transition: all linear .3s;
+                background: #FFFFFF;
+                box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.04);
+                &:hover{
+                    background: $hover;
+                }
+                .image{
+                    display: flex;
+                    justify-content: center;
+                    padding-top: 16px;
+                }
+                .info{
+                    h3{
+                        padding: 20px 0;
+                        color: $black;
+                    }
+                    span{
+                        color: $star;
+                    }
+                    h2{
+                        padding: 20px 0 10px 0;
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 20px;
+                        line-height: 24px;
+                        color: #161616;
+                    }
+                    p{
+                        @include pera($pera);
+                        padding:0 10px;
+                    }
+                }
+            }
+        }
+    }
+}

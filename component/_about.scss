@@ -1,0 +1,109 @@
+@import "../variable/variable";
+@import "../mixin/mixin";
+
+#about{
+    padding: 140px 0;
+    @include x-small{
+        padding: 80px 0 60px 0;
+    }
+    @include small{
+        padding: 100px 0 60px 0;
+    }
+    @include medium2{
+        padding: 100px 0 80px 0;
+    }
+    @include large{
+        padding: 120px 0;
+    }
+    .about-main{
+        display: flex;
+        gap: 70px;
+        align-items: center;
+        @include x-small{
+            flex-direction: column-reverse;
+        }
+        @include small{
+            flex-direction: column-reverse;
+        }
+        @include medium2{
+            flex-direction: column-reverse;
+        }
+        .about-image{
+            width: 50%;
+            @include x-small{
+                width: 90%;
+                margin-top: 60px;
+                
+            }
+            @include small{
+                width: 90%;
+                margin-top: 60px;
+                
+            }
+            @include medium2{
+                width: 90%;
+                margin-top: 60px;
+                
+            }
+            .image{
+                display: flex;
+                justify-content: center;
+                span{
+                    position: relative;
+                    display: inline-block;
+                    z-index: 1;
+                    &::after{
+                        content: "";
+                        height: 50%;
+                        width: calc(100% + 20px);
+                        background: $theme_color;
+                        position: absolute;
+                        left: 50%;
+                        bottom: -10px;
+                        transform: translateX(-50%);
+                        z-index: -1;
+                    }
+                    img{
+                        @include x-small{
+                            width:100%;
+                        }
+                    }
+                }
+            }
+        }
+        .about-info{
+            width: 50%;
+            @include x-small{
+                width: 100%;
+                padding-left: 10px
+            }
+            @include small{
+                width: 100%;
+                padding-left: 10px
+            }
+            @include medium2{
+                width: 100%;
+                padding-left: 10px
+            }
+            h2{
+                @include common_header(left);
+                @include x-small{
+                    font-size:30px;
+                }
+            }
+            p{
+                @include pera ($pera);
+                padding:20px 70px 50px 0;
+                @include x-small{
+                    padding: 0
+                }
+                @include small{
+                    padding: 0
+                }
+            }
+            a{
+                @include common_btn($theme_color,$white);
+            }
+        }
+    }
+}

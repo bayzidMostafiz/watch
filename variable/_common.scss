@@ -1,0 +1,29 @@
+@import "../mixin/mixin";
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+ul,li,ol{
+    list-style: none;
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1170px;
+    @include small {
+        max-width: 540px;
+    }
+    @include medium2{
+        max-width: 720px;
+    }
+    @include large{
+        max-width: 960px;
+    }
+}

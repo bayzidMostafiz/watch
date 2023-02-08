@@ -1,0 +1,4 @@
+@media (max-width: 991.98px) {
+    .navbar .active .mobile_navbar .navbar_icon[name=menu_outline] {
+      display: none;
+    }}

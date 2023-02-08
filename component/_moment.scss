@@ -1,0 +1,117 @@
+@import "../mixin/mixin";
+@import "../variable/variable";
+
+#moment{
+    padding: 120px 0;
+    @include x-small{
+        padding: 80px 0;
+    }
+    @include small{
+        padding: 80px 0;
+    }
+    @include medium2{
+        padding: 100px 0;
+    }
+    .moment-main{
+        width: 90%;
+        margin: 0 auto;
+        background: $black;
+        display: flex;
+        gap: 80px;
+        @include x-small{
+            flex-direction: column;
+        }
+        @include small{
+            flex-direction: column;
+        }
+        @include medium2{
+            flex-direction: column;
+        }
+        .image{
+            padding: 175px 0 25px 52px ;
+            @include x-small{
+                padding-top: 80px;
+                padding-left: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            @include small{
+                padding-top: 80px;
+                padding-left: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            @include medium2{
+                padding-top: 80px;
+                padding-left: 0;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            
+            span{
+                position: relative;
+                display: inline-block;
+                z-index: 1;
+                &::after{
+                    content: "";
+                    height: 50%;
+                    width: calc(100% + 20px);
+                    background: $theme_color;
+                    position: absolute;
+                    left: 50%;
+                    bottom: -10px;
+                    transform: translateX(-50%);
+                    z-index: -1;
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .info{
+            padding:0 0 30px 10px;
+            h2{
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 48px;
+            color: #FFFFFF;
+            padding-top: 135px;
+            padding-right: 220px;
+            @include x-small{
+                font-size: 30px;
+                line-height: 1.5;
+                padding-top: 0;
+                padding-right: 20px
+            }
+            @include small{
+                font-size: 40px;
+                line-height: 48px;
+                padding-top: 0;
+                padding-right: 20px
+            }
+            @include medium2{
+                font-size: 40px;
+                line-height: 48px;
+                padding-top: 0;
+                padding-right: 20px
+            }
+            @include large{
+                font-size: 40px;
+                line-height: 48px;
+                padding-right: 20px
+            }
+            }
+            
+            p{
+                @include pera($white);
+                padding: 20px 50px 40px 0;
+            }
+            a{
+                @include common_btn($theme_color,$white);
+            }
+        }
+    }
+}
